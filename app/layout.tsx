@@ -34,6 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
   modal: React.ReactNode;
@@ -45,7 +46,7 @@ export default function RootLayout({
           <AuthProvider>
             <Header />
             <main>
-              {children}
+              {children} { modal}
             </main>
             <Footer />
           </AuthProvider>
